@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hinos Estaduais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bodybrasil">
+    <h1 id="titulobrasil">Hinos Estaduais do <a href="br.html" class="brasil">Brasil</a></h1>
+    
+    <div class="bandeiras-container">
+        <a href="sp.html" data-frase="São Paulo" class="bandeira">
+            <img src="bandeirasp.png" alt="Hino de São Paulo" width="250" height="175">
+        </a>
+
+        <a href="sc.html" data-frase="Santa Catarina" class="bandeira">
+            <img src="bandeirasc.png" alt="Hino de Santa Catarina" width="250" height="175">
+        </a>
+
+        <a href="ba.html" data-frase="Bahia" class="bandeira">
+            <img src="bandeiraba.png" alt="Hino da Bahia" width="250" height="175">
+        </a>
+
+        <a href="mg.html" data-frase="Minas Gerais" class="bandeira">
+            <img src="bandeiramg.png" alt="Hino de Minas Gerais" width="250" height="175">
+        </a>
+
+        <a href="mt.html" data-frase="Mato Grosso" class="bandeira">
+            <img src="bandeiramt.png" alt="Hino de Mato Grosso" width="250" height="175">
+        </a>
+
+        <a href="rr.html" data-frase="Roraima" class="bandeira">
+            <img src="bandeirarr.png" alt="Hino de Roraima" width="250" height="175">
+        </a>
+
+        <a href="rj.html" data-frase="Rio de Janeiro" class="bandeira">
+            <img src="bandeirarj.png" alt="Hino do Rio de Janeiro" width="250" height="175">
+        </a>
+
+        <a href="ma.html" data-frase="Maranhão" class="bandeira">
+            <img src="bandeirama.png" alt="Hino do Maranhão" width="250" height="175">
+        </a>
+
+        <a href="go.html" data-frase="Goiás" class="bandeira">
+            <img src="bandeirago.png" alt="Hino de Goiás" width="250" height="175">
+        </a>
+
+        <a href="df.html" data-frase="Distrito Federal" class="bandeira">
+            <img src="bandeiradf.png" alt="Hino do Distrito Federal" width="250" height="175">
+
+        </a>
+    </div>
+
+    
+    <div id="frase-exibida">Passe o mouse sobre uma bandeira para escolher um estado</div>
+
+    <script>
+        const bandeiras = document.querySelectorAll('.bandeira');
+        const fraseExibida = document.getElementById('frase-exibida');
+
+        bandeiras.forEach(bandeira => {
+            bandeira.addEventListener('mouseenter', function() {
+        
+                fraseExibida.textContent = bandeira.getAttribute('data-frase');
+
+                fraseExibida.style.opacity = 1;
+            });
+
+            bandeira.addEventListener('mouseleave', function() {
+              
+                fraseExibida.style.opacity = 0;
+            });
+        });
+    </script>
+</body>
+</html>
